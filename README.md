@@ -1,7 +1,9 @@
 # ASP.NET Core MVC mit Model-First-Ansatz
+> [!WARNING]
+> Dieser Leitfaden bezieht sich auf die Verwendung und Implementierung von .NET 8. Alle Beispiele und Anweisungen wurden entsprechend der Spezifikationen und Funktionen von .NET 8 erstellt und getestet.
 
 > [!IMPORTANT]
-> Dieses Projekt zeigt die Erstellung einer ASP.NET-Anwendung mit dem Model-First-Ansatz unter Verwendung der .NET Command Line Interface (CLI). Der Model-First-Ansatz definiert Datenmodelle, um darauf aufbauend die Datenbank und den Rest der Anwendung zu generieren.
+> Dieser Leitfaden zeigt die Erstellung einer ASP.NET-Anwendung mit dem Model-First-Ansatz unter Verwendung der .NET Command Line Interface (CLI). Der Model-First-Ansatz definiert Datenmodelle, um darauf aufbauend die Datenbank und den Rest der Anwendung zu generieren.
 >
 > Für mehr Informationen siehe:<br>
 > https://learn.microsoft.com/de-at/aspnet/core/tutorials/first-mvc-app/start-mvc
@@ -35,7 +37,7 @@ In der `appsettings.development.json` Datei muss folgender Connection String hin
 
 ## Erstellung eines User-Models
 > [!TIP]
-> Für dieses Projekt wurde eine einfache Modellklasse verwendet, um die Aufsetzung und Konfiguration zu beschleunigen, wobei für komplexere Anwendungen das Modell um zusätzliche Felder, Fremdschlüssel und weitere Elemente erweitert werden kann.
+> Für diesen Leitfaden wurde eine einfache Modellklasse verwendet, um die Aufsetzung und Konfiguration zu beschleunigen, wobei für komplexere Anwendungen das Modell um zusätzliche Felder, Fremdschlüssel und weitere Elemente erweitert werden kann.
 
 ```csharp
 
@@ -52,7 +54,7 @@ public class User
 
 ## Erstellung der Context-Klasse
 > [!TIP]
-> Bevor du die Context-Klasse erstellst, solltest du sicherstellen, dass die Model-Klassen, die deine Datenbanktabellen repräsentieren, bereits erstellt wurden. Die Context-Klasse verwendet diese Model-Klassen, um die Struktur der Datenbank und die Beziehungen zwischen den Tabellen zu definieren.
+> Bevor die Context-Klasse erstellt wird, sollte sichergestellt werden, dass die Model-Klassen, die die Datenbanktabellen repräsentieren, bereits erstellt wurden. Die Context-Klasse verwendet diese Model-Klassen, um die Struktur der Datenbank und die Beziehungen zwischen den Tabellen zu definieren.
 
 Hier ist ein Beispiel für eine Context-Klasse, die eine `DbSet<User>`-Eigenschaft verwendet, wobei `User` eine Model-Klasse ist, die bereits im Projekt definiert sein sollte:
 
