@@ -1,7 +1,4 @@
 # ASP.NET Core MVC mit Model-First-Ansatz
-> [!WARNING]
-> Dieser Leitfaden bezieht sich auf die Verwendung und Implementierung von .NET 8. Alle Beispiele und Anweisungen wurden entsprechend der Spezifikationen und Funktionen von .NET 8 erstellt und getestet.
-
 > [!IMPORTANT]
 > Dieser Leitfaden zeigt die Erstellung einer ASP.NET-Anwendung mit dem Model-First-Ansatz unter Verwendung der .NET Command Line Interface (CLI). Der Model-First-Ansatz definiert Datenmodelle, um darauf aufbauend die Datenbank und den Rest der Anwendung zu generieren.
 >
@@ -34,6 +31,9 @@ In der `appsettings.development.json` Datei muss folgender Connection String hin
 }
 
 ```
+
+> [!WARNING]
+> Connection Strings sollten niemals direkt in `appsettings` oder im Code gespeichert werden. Es wird empfohlen, Umgebungsvariablen oder sichere Speicher wie Azure Key Vault zu verwenden, um Datenbankverbindungen zu schützen.
 
 ## Erstellung eines User-Models
 > [!TIP]
