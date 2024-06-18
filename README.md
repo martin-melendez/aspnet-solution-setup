@@ -1,9 +1,6 @@
 # ASP.NET Core MVC mit Model-First-Ansatz
 > [!IMPORTANT]
 > Dieser Leitfaden zeigt die Erstellung einer ASP.NET-Anwendung mit dem Model-First-Ansatz unter Verwendung der .NET Command Line Interface (CLI). Der Model-First-Ansatz definiert Datenmodelle, um darauf aufbauend die Datenbank und den Rest der Anwendung zu generieren.
->
-> Für mehr Informationen siehe:<br>
-> https://learn.microsoft.com/de-at/aspnet/core/tutorials/first-mvc-app/start-mvc
 
 ## Einrichtung
 Für dieses Projekt werden folgende NuGet-Pakete benötigt:
