@@ -46,11 +46,43 @@ public class User
     public int Id { get; set; }
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
-
-    etc..
 }
 
 ```
+
+## Beziehungen definieren
+In diesem Abschnitt wird ein Beispiel für eine 1-zu-n-Beziehung (One-to-Many) zwischen zwei Entitäten `Role` und `User` gezeigt. Eine `Role` kann mehreren `User` Objekten zugeordnet sein, während ein `User` nur eine `Role` haben kann.
+
+#### `Role` Klasse
+```csharp
+
+public class Role
+{
+    public int Id { get; set; }
+    public string RoleName { get; set; } = null!;
+
+    public virtual ICollection<User>? Users { get; set; }
+}
+
+```
+
+#### `User` Klasse
+```csharp
+
+public class User
+{
+    public int Id { get; set; }
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null!;
+
+    public int? RoleId { get; set; }
+    public virtual Role? Role { get; set; }
+}
+
+```
+
+> [!TIP]
+> Das Schlüsselwort `virtual` wird bei den Eigenschaften `Users` und `Role` verwendet. Dies ermöglicht es, dass diese Beziehungen bei Bedarf automatisch aus der Datenbank geladen werden, ohne dass sie immer sofort beim Laden des Objekts dabei sein müssen. Das hilft, die App schneller zu machen, weil sie nur die Infos lädt, die gerade benötigt werden.
 
 ## Erstellung der Context-Klasse
 > [!TIP]
