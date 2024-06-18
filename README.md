@@ -34,6 +34,9 @@ In der `appsettings.development.json` Datei muss folgender Connection String hin
 
 > [!WARNING]
 > Connection Strings sollten niemals direkt in `appsettings` oder im Code gespeichert werden. Es wird empfohlen, Umgebungsvariablen oder sichere Speicher wie Azure Key Vault zu verwenden, um Datenbankverbindungen zu schützen.
+>
+> Mehr über Azure Key Vault lesen:<br>
+> https://learn.microsoft.com/de-de/azure/key-vault/general/quick-create-portal
 
 ## Erstellung eines User-Models
 > [!TIP]
@@ -51,7 +54,7 @@ public class User
 ```
 
 ## Beziehungen definieren
-In diesem Abschnitt wird ein Beispiel für eine 1-zu-n-Beziehung (One-to-Many) zwischen zwei Entitäten `Role` und `User` gezeigt. Eine `Role` kann mehreren `User` Objekten zugeordnet sein, während ein `User` nur eine `Role` haben kann.
+Hier wird ein Beispiel für eine 1-zu-n-Beziehung (One-to-Many) zwischen zwei Entitäten `Role` und `User` gezeigt. Eine `Role` kann mehreren `User` Objekten zugeordnet sein, während ein `User` nur eine `Role` haben kann.
 
 #### `Role` Klasse
 ```csharp
@@ -65,6 +68,9 @@ public class Role
 }
 
 ```
+
+> [!TIP]
+> `ICollection` in der `Role` Klasse definiert eine dynamische `User`-Sammlung, die Lazy Loading unterstützt, um die Leistung zu optimieren.
 
 #### `User` Klasse
 ```csharp
