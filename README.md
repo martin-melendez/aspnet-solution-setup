@@ -40,7 +40,7 @@ In der `appsettings.development.json` Datei muss folgender Connection String hin
 
 ## Erstellung eines User-Models
 > [!TIP]
-> Für diesen Leitfaden wurde eine einfache Modellklasse verwendet, um die Aufsetzung und Konfiguration zu beschleunigen, wobei für komplexere Anwendungen das Modell um zusätzliche Felder, Fremdschlüssel und weitere Elemente erweitert werden kann.
+> Diese Modellklasse dient als Grundlage für den Model-First-Ansatz, der bei Bedarf um zusätzliche Felder und Beziehungen erweitert werden kann.
 
 ```csharp
 
